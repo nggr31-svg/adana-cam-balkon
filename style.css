@@ -1,111 +1,71 @@
-/* الخلفية: اللوجو يغطي كامل الموقع */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    background: url("logo.png") center center fixed no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("logo.png") center no-repeat fixed;
+  background-size: contain;
+  background-color: black;
+  color: white;
 }
 
-/* طبقة شفافة فوق الخلفية لتوضيح النص */
+/* طبقة شفافة */
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65); /* غيّر الشفافية إذا حاب */
-    z-index: -1;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
 }
 
-/* الهيدر (البداية) */
+/* البداية */
 .hero {
-    text-align: center;
-    padding: 100px 20px 60px;
-    color: #f9f9f9;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* صورة اللوجو في الأعلى */
 .logo {
-    width: 180px;
-    max-width: 60%;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  max-width: 250px;
+  margin-bottom: 20px;
 }
 
-/* العنوان الرئيسي */
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-/* زرّين الخدمات وواتساب */
+/* الأزرار */
 .btn {
-    background: #d4af37;           /* ذهبي */
-    padding: 12px 25px;
-    color: #000;
-    text-decoration: none;
-    border-radius: 6px;
-    margin: 5px;
-    display: inline-block;
-    font-weight: bold;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #d4af37;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: none;
 }
 
 /* الأقسام */
-section {
-    padding: 40px 20px;
-    text-align: center;
+.box {
+  background: rgba(0, 0, 0, 0.65);
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 1000px;
+  border-radius: 15px;
 }
 
-/* صناديق شبه شفافة فوق الخلفية */
-#about,
-#services,
-#gallery,
-#contact {
-    max-width: 1100px;
-    margin: 0 auto 30px;
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+/* شبكة الخدمات */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
 }
 
-/* العناوين الفرعية */
-h2 {
-    color: #d4af37;
-}
-
-/* كروت الخدمات والمعرض */
-.services-container,
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.service-card,
-.gallery-container img {
-    width: 320px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-}
-
-/* الصور */
-.service-card img,
-.gallery-container img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+/* مربعات الخدمات */
+.card {
+  background: rgba(212,175,55,0.2);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #d4af37;
 }
 
 /* الفوتر */
 footer {
-    background: rgba(0,0,0,0.85);
-    color: #d4af37;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  color: gold;
 }
